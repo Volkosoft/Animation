@@ -1,0 +1,54 @@
+body {
+    background-color: #333;
+}
+.container {
+    width: 90%;
+    height: 500px;
+    margin: 50px auto;
+}
+.cube {
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid green;
+    position: relative;
+    perspective: 500px ;
+    animation: rotate 10s infinite linear;
+}
+.cube > div {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border: 1px solid green;
+    font-size: 50px;
+    text-align: center;
+    line-height: 400px;
+}
+.cube .front {
+    z-index: 1;
+}
+.cube > .back {
+    transform: translateZ(-400px);
+}
+.cube > .left {
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+.cube > .right {
+    transform: rotateY(-90deg);
+    transform-origin: right;
+}
+.cube > .top {
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+.cube > .bottom {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+@keyframes rotate {
+     100% {
+          transform: rotateZ(360deg);
+        }
+  }
