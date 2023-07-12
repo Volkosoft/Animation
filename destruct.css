@@ -1,0 +1,70 @@
+body {
+    background-color: #222;
+}
+.destruct {
+    font-family: 'Nova Square', cursive;
+    width: 340px;
+    height: 340px;
+    margin: 100px auto;
+    padding: 30px;
+    position: relative;
+}
+.destruct h2 {
+    font-size: 60px;
+    color: orange;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.destruct h3 {
+    font-size: 40px;
+    color: orangered;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.destruct .square {
+    width: 360px;
+    height: 360px;
+    border: 20px solid rgb(103, 68, 2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.destruct .tl-corner, .br-corner {
+    width: 250px;
+    height: 250px;
+    border: 30px solid burlywood;
+    position: absolute;
+    filter: drop-shadow(0 0 5px #000);
+}
+.destruct .tl-corner {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    top: -10px;
+    left: -10px;
+}
+.destruct .br-corner {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    bottom: -10px;
+    right: -10px;
+}
+.destruct:hover {
+    perspective: 1000px;
+}
+.destruct .tl-corner {
+    transform:  translate3d(0, 0, 150px);
+}
+.destruct .br-corner {
+    transform:  translate3d(0, 0, 150px);
+}
+.destruct .square {
+    transform: translateZ(-300px);
+}
+.destruct h2 {
+    transform:  translate3d(0, 0, 100px);
+}
+.destruct h3 {
+    transform:  translate3d(100px, 75px, 100px);
+}
